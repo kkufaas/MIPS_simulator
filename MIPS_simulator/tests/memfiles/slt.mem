@@ -1,0 +1,10 @@
+
+# structure:
+# 'TestName' 'destination(register/address)' 'value' 'exception'
+
+
+> Test_slt 11 1 !trap
+0x0000000000000000	0x2129209B	addi  $t1, $t1, 0x209b
+0x0000000000000004	0x214A209C	addi  $t2, $t2, 0x209c
+0x0000000000000008	0x012A582A	slt   $t3, $t1, $t2
+0x000000000000000c	0x0000000D	break

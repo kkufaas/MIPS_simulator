@@ -1,0 +1,12 @@
+
+
+# structure:
+# 'TestName' 'destination(register/address)' 'value' 'exception'
+
+
+> Test_nop 0 0 !trap
+0x0000000000000000	0x00000000	nop
+0x0000000000000004	0x00000000	nop
+0x0000000000000008	0x00000000	nop
+0x000000000000000c	0x00000000	nop
+0x0000000000000010	0x0000000D	break

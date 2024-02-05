@@ -1,0 +1,14 @@
+
+# structure:
+# 'TestName' 'destination(register/address)' 'value' 'exception'
+
+
+> Test_break 8 0 !trap
+0x00000000	0x0000000D	break
+
+
+> Test_break_after_add 9 1 !trap
+0x0000000000000000	0x21290001	addi  $t1, $t1, 1
+0x0000000000000004	0x0000000D	break 
+0x0000000000000008	0x21290001	addi  $t1, $t1, 1
+0x000000000000000c	0x0000000D	break 

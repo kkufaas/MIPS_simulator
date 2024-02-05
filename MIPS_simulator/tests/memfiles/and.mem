@@ -1,0 +1,10 @@
+
+# structure:
+# 'TestName' 'destination(register/address)' 'value' 'exception'
+
+
+> Test_and_1-1 12 1 !trap
+0x0000000000000000	0x258C0001	addiu $t4, $t4, 1
+0x0000000000000004	0x25ADFFFF	addiu $t5, $t5, -1
+0x0000000000000008	0x018D6024	and   $t4, $t4, $t5
+0x000000000000000c	0x0000000D	break

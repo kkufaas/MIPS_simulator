@@ -1,0 +1,14 @@
+
+# structure:
+# 'TestName' 'destination(register/address)' 'value' 'exception'
+
+
+> Test_lui 9 268500992 !trap
+0x0000000000000000	0x3C091001	lui   $t1, 0x1001
+0x0000000000000004	0x0000000D	break 
+
+> Test_lui_and_or 11 268505089 !trap
+0x0000000000000000	0x3C091001	lui   $t1, 0x1001
+0x0000000000000004	0x240A1001	addiu $t2, $zero, 0x1001
+0x0000000000000008	0x012A5825	or    $t3, $t1, $t2
+0x000000000000000c	0x0000000D	break 

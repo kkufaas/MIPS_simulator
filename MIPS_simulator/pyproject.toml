@@ -1,0 +1,18 @@
+[project]
+name = "MIPS"
+authors = [
+    { name = "Erlend Graff", email = "erlend.h.graff@uit.no" },
+    { name = "Øyvind  Nohr", email = "oyvind.a.nohr@uit.no" },
+]
+classifiers = ["Private :: Do Not Upload"]
+version = "0"
+dependencies = []
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov"]

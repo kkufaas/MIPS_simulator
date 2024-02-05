@@ -1,0 +1,17 @@
+
+# structure:
+# 'TestName' 'destination(register/address)' 'value' 'exception'
+
+
+> Test_neg_nor 11 -10 !trap
+0x0000000000000000	0x21290001	addi  $t1, $t1, 1
+0x0000000000000004	0x214A0008	addi  $t2, $t2, 8
+0x0000000000000008	0x012A5827	nor   $t3, $t1, $t2
+0x000000000000000c	0x0000000D	break 
+
+
+> Test_pos_nor 11 0 !trap
+0x0000000000000000	0x21290001	addi  $t1, $t1, 1
+0x0000000000000004	0x214AFFFE	addi  $t2, $t2, -2
+0x0000000000000008	0x012A5827	nor   $t3, $t1, $t2
+0x000000000000000c	0x0000000D	break

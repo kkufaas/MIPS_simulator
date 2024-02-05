@@ -1,0 +1,10 @@
+
+# structure:
+# 'TestName' 'destination(register/address)' 'value' 'exception'
+
+
+> Test_SUBU_7fff-ffff 11 -2147483648 !trap
+0x0000000000000000	0x3C097FFF	lui   $t1, 0x7fff
+0x0000000000000004	0x3C0AFFFF	lui   $t2, 0xffff
+0x0000000000000008	0x012A5823	subu  $t3, $t1, $t2
+0x000000000000000c	0x0000000D	break
